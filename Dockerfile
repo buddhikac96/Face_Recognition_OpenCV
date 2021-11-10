@@ -4,6 +4,9 @@ WORKDIR /app/
 
 COPY . .
 
+RUN apt-get update ##[edited]
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+
 RUN pip install -r requirements.txt
 
 RUN python extract_embeddings.py --dataset dataset  --embeddings output/embeddings.pickle  --detector face_detection_model  --embedding-model openface_nn4.small2.v1.t7
