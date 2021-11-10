@@ -1,1 +1,6 @@
 opencv-python
+sklearn
+argparse
+pickle
+numpy
+imutils
